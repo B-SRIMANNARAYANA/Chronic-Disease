@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+   *{
+       box-sizing: border-box;
+   }
+   body{
+   margin:0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   transition: box-shadow 0.3s ease-in-out; 
+   
+}
+.header{
+   height: 10vh;
+   background-color:black;
+   display: flex;
+}
+.header .img{
+   height: 95%;
+   margin:2px 5px 0 5px;
+
+}
+.img img{
+   height: 100%;
+}
+.main_heading{
+   color: white;
+   width: 12vw;
+   display: inline-block;
+
+}
+
+.main_heading h2{
+   display: block;
+   text-align: center;
+   font-size: 1.5em;
+   
+}
+.container{
+   background-image: url("https://images.ctfassets.net/222znibi5gto/3URyQiF44O2d7rdQOUTero/d4c07004da6b87cb829aa8d04348e5b8/GettyImages-656948420-3000x2000.jpg?fm=webp&fit=thumb&q=65&w=492&h=328");
+   background-size: cover;
+   padding: 10px 0 10px 60vw;
+}
+
+#form{
+   width:30vw;
+   background-color: rgba(186, 214, 244, 0.714);
+   border-radius: 5px;
+   padding:30px;
+   height: 85vh;
+   overflow:scroll ;
+   border: 1px solid black;
+   min-width: 350px;
+   
+}
+#form label{
+   font-size: 0.8em;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+#form:hover{
+   background-color: rgba(165, 191, 201, 0.941);
+}
+#form::-webkit-scrollbar {
+   display: none;
+}
+
+.heading h1{
+   color:black;
+   display: inline;
+}
+.heading{
+   height: 10%;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+#form button{
+   background-color: rgba(0, 0, 0, 0.719);
+   color:white;
+   border: 1px solid rgba(0, 0, 0, 0.774);
+   border-radius: 5px;
+   margin:30px 0px 10px 0px;
+   cursor:pointer;
+   box-shadow: #ec9065;
+   font-size:0.8em;
+   width:85%;
+   height: 30px;
+}
+#form button:hover{
+   background-color: black;
+}
+.input-group{
+   display:flex;
+   flex-direction: column;
+   margin-bottom: 15px;
+}
+
+.input-group input{
+   border-radius: 5px;
+   font-size:0.7em;
+   margin-top:5px;
+   padding:10px;
+   border:0.4px solid black ;
+   height: 30px;
+   
+}
+.input-group input:hover{
+   background-color: aliceblue;
+}
+.input-group input:focus{
+   outline:0.5px solid rgba(0, 0, 0, 0.489);
+}
+
+.input-group .error{
+   color:rgb(242, 18, 18);
+   font-size:16px;
+   margin-top: 5px;
+}
+
+.input-group.success input{
+   border-color: #3241b4;
+}
+
+.input-group.error input{
+   border-color:rgb(206, 67, 67);
+}
+.form:hover {
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+ }
+footer{
+   height: 15vh;
+   text-align: center;
+   background-color: black;
+   color: rgb(226, 221, 221);
+   font-size:small;
+   padding-top: 20px;
+}
+</style>
+</head>
+<body>
+   <header class="header">
+      <div class="img">
+      <img src="https://yaledailynews.com/wp-content/uploads/2016/12/obesity-world-yanna-lee-staff.png">
+      </div>
+      <div CLASS="main_heading">
+          <h2>OBESITY</h2>
+      </div>
+  </header>
+<div class="container">
+<form action="/submit2" id="form" method="post">
+<div class="heading"> 
+<h1>OBESITY</h1>
+<hr>
+</div>
+<div class="input-group">
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age">
+    <div class="error"></div>
+ </div>
+ <div class="input-group">
+   <label for="Gender">Gender</label>
+   <label for="Male" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+       <input type="radio" name="Gender" id="Male" value="1" style="stroke: none;"> Male
+   </label>
+   <label for="Female" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+       <input type="radio" name="Gender" id="Female" value="0" style="stroke: none;"> Female
+   </label>
+   
+</div>
+ <div class="input-group">
+    <label for="height">Height (in cm)</label>
+    <input type="text" id="height" name="height">
+    <div class="error"></div>
+ </div>
+ <div class="input-group">
+    <label for="weight">Weight (in kg)</label>
+    <input type="text" id="weight" name="weight">
+    <div class="error"></div>
+ </div>
+ <div class="input-group">
+    <label for="bmi">BMI</label>
+    <input type="text" id="bmi" name="bmi" readonly>
+    <div class="error"></div>
+ </div>
+ <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+ <button type="submit">Submit</button>
+ </form>
+ </div>
+
+ <script>
+    function calculateBMI() {
+        var height = parseFloat(document.getElementById('height').value) / 100; // Convert height to meters
+        var weight = parseFloat(document.getElementById('weight').value);
+        
+        if (isNaN(height) || isNaN(weight)) {
+            alert('Please enter valid height and weight.');
+            return;
+        }
+        
+        var bmi = weight / (height * height); // BMI formula: weight (kg) / (height (m) * height (m))
+        document.getElementById('bmi').value = bmi.toFixed(2); // Display BMI with two decimal places
+    }
+ </script>
+ <footer>
+   <p>Predict your health, shape your future. Explore our tools for proactive wellness. Start now! </p>
+</footer>
+</body>
+</html>

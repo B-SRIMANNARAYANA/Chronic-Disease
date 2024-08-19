@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding:0;
+            margin:0;
+        }
+        header{
+            background-color: black;
+            height: 10vh;
+            padding:5px;
+            display: flex;
+        }
+        .img{
+            height: 100%;
+            margin-right:5px;
+            
+        }
+       .img img{
+        object-fit: cover;
+        height: 100%;
+       }
+       .main_heading{
+        display: inline;
+        color: white;
+       }
+       main{
+        display: flex;
+        justify-content: center;
+        padding:30px 0;
+       }
+       .container{
+        padding:20px;
+        display: flex;
+        flex-direction: row;
+       }
+       .result_img{
+        width: 40%;
+        height: 400px;
+        margin-right:10px ;
+       }
+       .result_img img{
+        width: 100%;
+        height: 100%;
+       }
+       .container{
+        width:90vw;
+        border: 1px solid black;
+        border-radius: 2%;
+       }
+       .result_text{
+        padding:30px;
+        width:60%;
+       }
+       .result_text h3{
+        color:rgb(58, 208, 58);
+       }
+       footer{
+        background-color: black;
+        height: 12vh;
+        color: white;
+        text-align: center;
+        padding-top:10px;
+        font-size: medium;
+       }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="img">
+        
+        <img src="https://my.clevelandclinic.org/-/scassets/images/org/health/articles/21692-right-bundle-branch-block-illustration">
+        </div>
+        <div CLASS="main_heading">
+            <h2>LUNG CANCER</h2>
+        </div>
+    </header>
+    <main>
+        {% if prediction == 1%}
+        <div class="container">
+            
+            <div class="result_img" style='background-image: url("https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg");'>
+               </div>
+            <div class="result_text">
+            <h3>YOU ARE FINE</h3>
+            <p><pre>“Dear Patient,
+                I'm thrilled to inform you that your test 
+                results for lung cancer have come back absolutely normal.
+                This means there are no signs of cancer or any abnormalities 
+                detected in your lungs. It's important to celebrate this 
+                positive outcome and continue to prioritize your health 
+                by maintaining a healthy lifestyle and attending regular 
+                check-ups. Your dedication to staying proactive about your 
+                health has paid off, and I'm here to support you every step 
+                of the way. If you have any questions or concerns, 
+                please don't hesitate to reach out.
+               </pre>
+            </p>
+            </div>
+        </div>
+            {% elif prediction == 0%}
+            <div class="container">
+            <div class="result_img" style='background-image: url("https://t4.ftcdn.net/jpg/02/81/43/61/360_F_281436126_aSLGmloL060zpus7bWrlmefFB6rJoMgF.jpg");'>
+            </div>
+                <div class="result_text">
+                <h3 style="color:rgb(255,0,0)">Sorry,Please consult a doctor.</h3>
+                <p><pre>“Dear Patient,
+                I regret to inform you that your recent health 
+                assessment has revealed some abnormalities.
+                We need to investigate further to understand the 
+                 underlying cause. Please schedule a follow-up
+                  appointment at your earliest convenience. 
+                  Remember, early intervention is crucial for better 
+                outcomes. Stay positive, and we’ll work together 
+                to address any health issues.”
+                </pre>
+                </p>
+                </div>
+            
+        </div>
+        {% endif %}
+    </main>
+    <footer>
+        <p>Predict your health, shape your future. Explore our tools for proactive wellness. Start now! </p>
+     </footer>
+</body>
+</html>

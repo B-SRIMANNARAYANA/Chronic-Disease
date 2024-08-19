@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DIABETICS</title>
+ <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: box-shadow 0.3s ease-in-out; 
+    
+}
+.header{
+    height: 10vh;
+    background-color:black;
+    display: flex;
+}
+.header .img{
+    height: 95%;
+    margin:2px 5px 0 5px;
+
+}
+.img img{
+    height: 100%;
+}
+.main_heading{
+    color: white;
+    width: 12vw;
+    display: inline-block;
+
+}
+
+.main_heading h2{
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+.container{
+    background-image: url("https://t3.ftcdn.net/jpg/05/51/76/10/360_F_551761008_w7jw51X6MUg716BBsJVOtrDFAXAUPeXM.jpg");
+    background-size: cover;
+    padding: 10px 0 10px 60vw;
+}
+
+#form{
+    width:30vw;
+    background-color: rgba(181, 173, 179, 0.714);
+    border-radius: 5px;
+    padding:30px;
+    height: 85vh;
+    overflow:scroll ;
+    border: 1px solid black;
+    min-width: 250px;
+    
+}
+#form label{
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#form:hover{
+    background-color: rgba(255, 243, 255, 0.941);
+}
+#form::-webkit-scrollbar {
+    display: none;
+}
+
+.heading h1{
+    color:black;
+    display: inline;
+}
+.heading{
+    height: 10%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form button{
+    background-color: rgba(0, 0, 0, 0.719);
+    color:white;
+    border: 1px solid rgba(0, 0, 0, 0.774);
+    border-radius: 5px;
+    margin:30px 0px 10px 0px;
+    cursor:pointer;
+    box-shadow: #ec9065;
+    font-size:0.8em;
+    width:85%;
+    height: 30px;
+}
+#form button:hover{
+    background-color: black;
+}
+.input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group input{
+    border-radius: 5px;
+    font-size:0.7em;
+    margin-top:5px;
+    padding:10px;
+    border:0.4px solid black ;
+    height: 30px;
+    
+}
+.input-group input:hover{
+    background-color: aliceblue;
+}
+.input-group input:focus{
+    outline:0.5px solid rgba(0, 0, 0, 0.489);
+}
+
+.input-group .error{
+    color:rgb(242, 18, 18);
+    font-size:16px;
+    margin-top: 5px;
+}
+
+.input-group.success input{
+    border-color: #3241b4;
+}
+
+.input-group.error input{
+    border-color:rgb(206, 67, 67);
+}
+.form:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+footer{
+    height: 15vh;
+    text-align: center;
+    background-color: black;
+    color: rgb(226, 221, 221);
+    font-size:small;
+    padding-top: 20px;
+}
+ </style>
+</head>
+<body>
+ <header class="header">
+    <div class="img">
+    <img src="https://www.shutterstock.com/image-vector/diabetes-complications-affected-organs-info-260nw-341080460.jpg">
+    </div>
+    <div CLASS="main_heading">
+        <h2>DIABETES</h2>
+    </div>
+</header>
+ <div class="container">
+ <form action="/submit" id="form" method="post" onsubmit="return validateForm()">
+ <div class="heading"> 
+ <h1>DIABETES</h1>
+ <hr>
+ </div>
+ 
+ <div class="input-group">
+    <label for="Pregnancies">Pregnancies</label>
+    <input type="text" id="Pregnancies" name="Pregnancies"  placeholder="enter no.of Pregnancies" required>
+    <div class="error" id="error_pregnancies"></div>
+    </div>
+
+    <div class="input-group">
+        <label for="Glucose Level">Glucose Level</label>
+        <input type="text" id="Glucose Level" name="Glucose Level" placeholder="enter glucose level" required>
+        <div class="error" id="error_glucoselevel"></div>
+        </div>
+       
+        <div class="input-group">
+        <label for="Blood Pressure">Blood Pressure</label>
+        <input type="text" id="Blood Pressure" name="Blood Pressure" placeholder="enter blood pressure" required>
+        <div class="error" id="error_bloodpressure"></div>
+        </div>
+
+        <div class="input-group">
+            <label for="Skin Thickness">Skin Thickness</label>
+            <input type="text" id="Skin Thickness" name="Skin Thickness" placeholder="enter your skin thickness" required>
+            <div class="error" id="error_skinthickness"></div>    
+        </div>
+           
+            <div class="input-group">
+            <label for="insulin">insulin</label> 
+            <input type="text" id="insulin" name="insulin" placeholder="enter insulin level" required>
+            <div class="error" id="error_insulin"></div>
+        </div>
+    
+        
+ <div class="input-group">
+    <label for="bmi">BMI</label>
+    <input type="text" id="bmi" name="bmi">
+    <div class="error"></div>
+ </div>
+
+ <div class="input-group">
+ <label for="Age">Age</label>
+ <input type="text" id="Age" name="Age" placeholder="enter your age" required>
+ <div class="error"></div>
+ <button type="submit"  value="submit">Submit</button>
+ </div>
+ </form>
+</div>
+ <footer>
+    <p>Predict your health, shape your future. Explore our tools for proactive wellness. Start now! </p>
+ </footer>
+ <script>
+    function validateForm() {
+        var age = document.getElementById('Age').value;
+        var pregnancies = document.getElementById('Pregnancies').value;
+        var glucoseLevel = document.getElementById('Glucose Level').value;
+        var bloodPressure = document.getElementById('Blood Pressure').value;
+        var skinThickness = document.getElementById('Skin Thickness').value;
+        var insulin = document.getElementById('insulin').value;
+        var height = document.getElementById('height').value;
+        var weight = document.getElementById('weight').value;
+
+        var isValid = true;
+
+        // Validate each input field
+        if (isNaN(age) || age === '') {
+            isValid = false;
+            document.getElementById('error_age').innerText = "Please enter a valid age.";
+        }
+
+        if (isNaN(pregnancies) || pregnancies === '') {
+            isValid = false;
+            document.getElementById('error_pregnancies').innerText = "Please enter a valid number of pregnancies.";
+        }
+
+        if (isNaN(glucoseLevel) || glucoseLevel === '') {
+            isValid = false;
+            document.getElementById('error_glucose').innerText = "Please enter a valid glucose level.";
+        }
+
+        if (isNaN(bloodPressure) || bloodPressure === '') {
+            isValid = false;
+            document.getElementById('error_blood_pressure').innerText = "Please enter a valid blood pressure.";
+        }
+
+        if (isNaN(skinThickness) || skinThickness === '') {
+            isValid = false;
+            document.getElementById('error_skin_thickness').innerText = "Please enter a valid skin thickness.";
+        }
+
+        if (isNaN(insulin) || insulin === '') {
+            isValid = false;
+            document.getElementById('error_insulin').innerText = "Please enter a valid insulin level.";
+        }
+
+        if (isNaN(height) || height === '') {
+            isValid = false;
+            document.getElementById('error_height').innerText = "Please enter a valid height.";
+        }
+
+        if (isNaN(weight) || weight === '') {
+            isValid = false;
+            document.getElementById('error_weight').innerText = "Please enter a valid weight.";
+        }
+
+        return isValid;
+    }
+</script>
+  
+</body>
+</html>

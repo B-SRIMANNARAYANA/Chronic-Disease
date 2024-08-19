@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: box-shadow 0.3s ease-in-out; 
+    
+}
+.header{
+    height: 10vh;
+    background-color:black;
+    display: flex;
+}
+.header .img{
+    height: 95%;
+    margin:2px 5px 0 5px;
+
+}
+.img img{
+    height: 100%;
+}
+.main_heading{
+    color: white;
+    width: 12vw;
+    display: inline-block;
+
+}
+
+.main_heading h2{
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+.container{
+    background-image: url("https://media.istockphoto.com/id/1359314170/photo/heart-attack-and-heart-disease-3d-illustration.jpg?s=2048x2048&w=is&k=20&c=UUygkthbkR55BFfx_rNiHWWQplasmWxJnp_LchGlkJI=");
+    background-size: cover;
+    padding: 10px 0 10px 60vw;
+}
+
+#form{
+    width:30vw;
+    background-color: rgba(186, 214, 244, 0.714);
+    border-radius: 5px;
+    padding:30px;
+    height: 85vh;
+    overflow:scroll ;
+    border: 1px solid black;
+    min-width: 350px;
+    
+}
+#form label{
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#form:hover{
+    background-color: rgba(165, 191, 201, 0.941);
+}
+#form::-webkit-scrollbar {
+    display: none;
+}
+
+.heading h1{
+    color:black;
+    display: inline;
+}
+.heading{
+    height: 10%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form button{
+    background-color: rgba(0, 0, 0, 0.719);
+    color:white;
+    border: 1px solid rgba(0, 0, 0, 0.774);
+    border-radius: 5px;
+    margin:30px 0px 10px 0px;
+    cursor:pointer;
+    box-shadow: #ec9065;
+    font-size:0.8em;
+    width:85%;
+    height: 30px;
+}
+#form button:hover{
+    background-color: black;
+}
+.input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group input{
+    border-radius: 5px;
+    font-size:0.7em;
+    margin-top:5px;
+    padding:10px;
+    border:0.4px solid black ;
+    height: 30px;
+    
+}
+.input-group input:hover{
+    background-color: aliceblue;
+}
+.input-group input:focus{
+    outline:0.5px solid rgba(0, 0, 0, 0.489);
+}
+
+.input-group .error{
+    color:rgb(242, 18, 18);
+    font-size:16px;
+    margin-top: 5px;
+}
+
+.input-group.success input{
+    border-color: #3241b4;
+}
+
+.input-group.error input{
+    border-color:rgb(206, 67, 67);
+}
+.form:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+footer{
+    height: 15vh;
+    text-align: center;
+    background-color: black;
+    color: rgb(226, 221, 221);
+    font-size:small;
+    padding-top: 20px;
+}
+ </style>
+</head>
+<body>
+ <header class="header">
+    <div class="img">
+    <img src="https://my.clevelandclinic.org/-/scassets/images/org/health/articles/21692-right-bundle-branch-block-illustration">
+    </div>
+    <div CLASS="main_heading">
+        <h2>HEART STROKE</h2>
+    </div>
+</header>
+ <div class="container">
+ <form action="/submit3" id="form" method="post">
+ <div class="heading"> 
+ <h1>HEART STROKE</h1>
+ <hr>
+ </div>
+ 
+
+
+ <div class="input-group">
+    <label for="Gender">Gender</label>
+    <label for="Male" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="gender" id="Male" value="1" style="stroke: none;"> Male
+    </label>
+    <label for="Female" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="gender" id="Female" value="0" style="stroke: none;"> Female
+    </label>
+    <label for="Others" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #8fd7ed; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="gender" id="Others" value="2" style="stroke: none;"> Others
+    </label>
+</div>
+
+<div class="input-group">
+    <label for="Age">Age</label>
+    <input type="text" id="Age" name="age">
+    <div class="error"></div>
+    </div>
+
+
+ <div class="input-group">
+    <label for="Hyper Tension">Hyper Tension</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="hypertension" id="Yes" value="0" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="hypertension" id="No" value="1" style="stroke: none;"> No
+    </label>
+
+    </label>
+
+ </div>
+ <div class="input-group">
+    <label for="Heart Disease">Heart Disease</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="heart_disease" id="Yes" value="0" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="heart_disease" id="No" value="1" style="stroke: none;"> No
+    </label>
+
+    </label>
+
+ </div>
+
+ <div class="input-group">
+    <label for="Work-Type">Work-Type</label>
+    <label for="Private" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="work_type" id="Private" value="0" style="stroke: none;"> Private
+    </label>
+    <label for="Self-Employed" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="work_type" id="Self-Employed" value="1" style="stroke: none;"> Self-Employed
+    </label>
+    <label for="Govt_job" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #8fd7ed; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="work_type" id="Govt_job" value="2" style="stroke: none;"> Govt_job
+    </label>
+ </div>
+
+ <div class="input-group">
+    <label for="Glucose Level">Glucose Level</label>
+    <input type="text" id="Glucose Level" name="avg_glucose_level">
+    <div class="error"></div>
+ </div>
+
+ <div class="input-group">
+    <label for="bmi">BMI</label>
+    <input type="text" id="bmi" name="bmi" >
+    <div class="error"></div>
+ </div>
+
+ <div class="input-group">
+    <label for="Smoking">Smoking</label>
+    <label for="Formerly Smoked" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="smoking_status" id="Formely Smoked" value="0" style="stroke: none;"> Formerly Smoked
+    </label>
+    <label for="Never Smoked" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="smoking_status" id="Never Smoked" value="1" style="stroke: none;"> Never Smoked
+    </label>
+    <label for="Smokes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #8fd7ed; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="smoking_status" id="Smokes" value="2" style="stroke: none;"> Smokes
+    </label>
+    <label for="Unknown" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #8fd7ed; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="smoking_status" id="Unknown" value="2" style="stroke: none;"> Unknown
+    </label>
+</div>
+
+ <button type="submit" class="Submit">Submit</button>
+</div>
+</form>
+
+ <footer>
+    <p>Predict your health, shape your future. Explore our tools for proactive wellness. Start now! </p>
+ </footer>
+</body>
+</html>

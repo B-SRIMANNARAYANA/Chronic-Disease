@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoPredict - Predictive Health Analytics</title>
+    <link rel="icon" href="https://w7.pngwing.com/pngs/804/935/png-transparent-caduceus-logo-medicine-physician-staff-of-hermes-logo-health-thumbnail.png">
+    <!-- <link rel="stylesheet" href="new_frontpage.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height:100vh;
+    overflow-x: hidden;
+    
+}
+
+.header{
+    width: 100%;
+    background-color: #008DDA;
+    color: white;
+    text-align: center;
+    height: 8vh;
+    padding-top: 14px;
+}
+.main_heading{
+    display: inline;
+    font-size: 1.4em;
+}
+.navbar{
+    background-color: #FFF6E9;
+    border-bottom: 2px solid black ;
+
+}
+
+.navbar ul{ 
+    list-style-type: none;
+    width:100%;
+    height: auto;
+    display: flex;
+    padding-top:10px;
+    justify-content: space-around;
+}
+
+.navbar li{
+    display: inline-block;
+}
+form{
+    display: inline;
+}
+.navitem{
+    color:#FFF6E9;
+    font-size: 1.2em;
+    width:8.3em;
+    height: 30px;
+    
+    border:1px solid #FFF6E9;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+button{
+    border-radius: 3px;
+    color: white;
+    background-color: #008DDA;
+}
+
+.links{
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    color: #FFF6E9;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.navbar input:hover{
+    background-color: #FFF6E9;
+    color: #008DDA;
+    
+}
+
+main{
+    height: auto;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+#carousel_div{
+    width:100%;
+}
+#carousel_div{
+    object-fit: cover;
+}
+
+.carousel-item{
+    height: 550px;
+}
+
+.carousel-caption h2{
+    font-size: 2.5em;
+}
+.carousel-caption p{
+    font-size: 1.3em;
+}
+
+
+footer{
+    background-color: #008DDA;
+    color:#FFF6E9;
+    padding:20px 0;
+}
+
+footer ul{
+    list-style-type: none;
+}
+footer .contact{
+    width:30vw;
+    margin-left: 50px;
+}
+footer p{
+    font-size: 1.3em;
+    margin-left: 50px;
+}
+
+footer ul{
+    text-align:start;
+}
+.contact{
+    background-color:#008DDA ;
+}
+.socialmedia{
+    background-color: #FFF6E9;
+    color:#008DDA;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.socialmedia ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+    </style>
+</head>
+<body>
+<header class="header">
+    <h2 class="main_heading">ChronoPredict: Empowering Health Through Predictive Analytics</h2>
+</header>
+<nav class="navbar">
+    <ul>
+        <li class="navitem"><form action="/about"><button>About</button></form></li>
+        <li class="navitem"><form action="/diabetes"><button>Diabetes</button></form></li>
+        <li class="navitem"><form action="/heartdisease"><button>Heart Disease</button></form></li>
+        <li class="navitem"><form action="/obesity"><button>Obesity</button></form></li>
+        <li class="navitem"><form action="/heartstroke"><button>Heart Stroke</button></form></li>
+        <li class="navitem"><form action="/lungcancer"><button>Lung Cancer</button></form></li>
+    </ul>
+</nav>
+<main>
+    <div id="carousel_div" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel_div" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel_div" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel_div" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carousel_div" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carousel_div" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.shutterstock.com/image-photo/people-healthcare-health-problem-concept-600nw-1349221304.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Exploring Heart Disease</h2>
+                    <p>Discover the risk factors, symptoms, and preventive measures for heart disease.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/free-photo/closeup-shot-doctor-with-rubber-gloves-taking-blood-test-from-patient_181624-56107.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Understanding Diabetes</h2>
+                    <p>Learn about the causes, symptoms, and management of diabetes. Explore lifestyle changes and treatment options for better control.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.hindustantimes.com/ht-img/img/2023/06/22/1600x900/kidney_failure_thumb_1661931572963_1687435298219.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Insights into Kidney Disease</h2>
+                    <p>Explore the causes, symptoms, and treatment options for kidney disease.</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="https://kauveryhospital.com/blog/wp-content/uploads/2017/11/types-of-strokes.jpg" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block ">
+                    <h2>Insights into Brain Stroke</h2>
+                    <p>Discover the types of strokes, warning signs, risk factors, and available treatment options for brain stroke. Learn about rehabilitation and preventive measures for better brain health.</p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img src="https://embed-ssl.wistia.com/deliveries/31725fb7728adb600ec9bf05033ea83a.jpg?image_crop_resized=640x360" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block ">
+                    <h2>Lung Cancer Awareness</h2>
+                    <p>Understand the risk factors, symptoms, diagnosis, and treatment options for lung cancer. Learn about early detection methods and support resources for patients and caregivers.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_div" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel_div" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</main>
+<footer>
+    <div class="contact">
+        <p>Contact Us:</p>
+        <ul>
+            <li>Address: 123 Main Street, City, Country</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Email: info@chronopredict.com</li>
+        </ul>
+    </div>
+    <div class="socialmedia">
+        <hr>
+        <p>Follow us on</p>
+        <ul>
+            <li><i class="fab fa-facebook"></i> facebook.com/chronopredict</li>
+            <li><i class="fab fa-twitter"></i> twitter.com/chronopredict</li>
+            <li><i class="fab fa-linkedin"></i> linkedin.com/company/chronopredict</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

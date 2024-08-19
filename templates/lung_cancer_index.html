@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer</title>
+</head>
+<body>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: box-shadow 0.3s ease-in-out; 
+    
+    }
+    .header{
+        height: 10vh;
+        background-color:black;
+        display: flex;
+    }
+    .header .img{
+        height: 95%;
+        margin:2px 5px 0 5px;
+
+    }
+    .img img{
+        height: 100%;
+    }
+    .main_heading{
+        color: white;
+        width: 12vw;
+        display: inline-block;
+
+    }
+
+    .main_heading h2{
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .container{
+        background-image: url("https://pubmiddleware.mims.com/resource/image/85DA75E8-BB24-47FC-BC75-AE9200DAD67F/OriginalThumbnail/THUMBNAIL_shutterstock_321727454.jpg");
+        background-size: cover;
+        padding: 10px 0 10px 60vw;
+        height: 100vh;
+    }
+
+    #form{
+        width:30vw;
+        background-color: rgba(186, 214, 244, 0.714);
+        border-radius: 5px;
+        padding:30px;
+        height: 85vh;
+        overflow:scroll ;
+        border: 1px solid black;
+        min-width: 350px;
+        
+    }
+    #form label{
+        font-size: 0.8em;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    #form:hover{
+        background-color: rgba(165, 191, 201, 0.941);
+    }
+    #form::-webkit-scrollbar {
+        display: none;
+    }
+
+    .heading h1{
+        color:black;
+        display: inline;
+    }
+    .heading{
+        height: 10%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #form button{
+        background-color: rgba(0, 0, 0, 0.719);
+        color:white;
+        border: 1px solid rgba(0, 0, 0, 0.774);
+        border-radius: 5px;
+        margin:30px 0px 10px 0px;
+        cursor:pointer;
+        box-shadow: #ec9065;
+        font-size:0.8em;
+        width:85%;
+        height: 30px;
+    }
+    #form button:hover{
+        background-color: black;
+    }
+    .input-group{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .input-group input{
+        border-radius: 5px;
+        font-size:0.7em;
+        margin-top:5px;
+        padding:10px;
+        border:0.4px solid black ;
+        height: 30px;
+    }
+
+    .input-group input:hover{
+        background-color: aliceblue;
+    }
+    .input-group input:focus{
+        outline:0.5px solid rgba(0, 0, 0, 0.489);
+    }
+
+    .input-group .error{
+        color:rgb(242, 18, 18);
+        font-size:16px;
+        margin-top: 5px;
+    }
+
+    .input-group.success input{
+        border-color: #3241b4;
+    }
+
+    .input-group.error input{
+        border-color:rgb(206, 67, 67);
+    }
+    .form:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+    footer{
+        height: 15vh;
+        text-align: center;
+        background-color: black;
+        color: rgb(226, 221, 221);
+        font-size:small;
+        padding-top: 20px;
+    }
+ </style>
+</head>
+<body>
+ <header class="header">
+    <div class="img">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGQkq1YZDKjO3hmnzOkdczYgU0RbPCpIpD4VV4Yu91hvTspOk925TD1xZemnxL4yovWk&usqp=CAU">
+    </div>
+    <div CLASS="main_heading">
+        <h2>LUNG CANCER</h2>
+    </div>
+</header>
+ <div class="container">
+ <form action="/submit4" id="form" method="post">
+ <div class="heading"> 
+ <h1>Lung Cancer</h1>
+ <hr>
+ </div>
+
+ <div class="input-group">
+    <label for="Gender">Gender</label>
+    <label for="Male" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Gender" id="Male" value="1" style="stroke: none;"> Male
+    </label>
+    <label for="Female" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Gender" id="Female" value="0" style="stroke: none;"> Female
+    </label>
+    
+ </div>
+ 
+ <div class="input-group">
+ <label for="Age">Age</label>
+ <input type="text" id="Age" name="Age">
+ <div class="error"></div>
+ </div>
+
+ <div class="input-group">
+    <label for="Smoking">Smoking</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Smoking" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Smoking" id="No" value="1" style="stroke: none;"> No
+    </label>
+</div>
+
+
+ <div class="input-group">
+    <label for="Yellow Fingers">Yellow Fingers</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Yellow Fingers" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Yellow Fingers" id="No" value="1" style="stroke: none;"> No
+    </label>
+
+    </label>
+
+ </div>
+ <div class="input-group">
+    <label for="Anxiety">Anxiety</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Anxiety" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Anxiety" id="No" value="1" style="stroke: none;"> No
+    </label>
+
+    </label>
+
+ </div>
+ <div class="input-group">
+    <label for="Peer_Pressure">Peer_Pressure</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Peer_Pressure" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Peer_Pressure" id="No" value="1" style="stroke: none;"> No
+    </label>
+    
+ </div>
+
+ <div class="input-group">
+    <label for="Allergy">Allergy</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Allergy" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Allergy" id="No" value="1" style="stroke: none;"> No
+    </label>
+    
+ </div>
+
+ <div class="input-group">
+    <label for="Alcohol">Alcohol</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Alcohol" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Alcohol" id="No" value="1" style="stroke: none;"> No
+    </label>
+    
+</div>
+
+<div class="input-group">
+    <label for="Coughing">Coughing</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Coughing" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Coughing" id="No" value="1" style="stroke: none;"> No
+    </label>
+    
+</div>
+
+<div class="input-group">
+    <label for="Shortness of Breath">Shortness of Breath</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Shortness of Breath" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Shortness of Breath" id="No" value="1" style="stroke: none;"> No
+    </label>
+    
+</div>
+
+<div class="input-group">
+    <label for="Swallowing Difficulty">Swallowing Difficulty</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Swallowing Difficulty" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Swallowing Difficulty" id="No" value="1" style="stroke: none;"> No
+    </label>
+    
+</div>
+
+<div class="input-group">
+    <label for="Chest Pain">Chest Pain</label>
+    <label for="Yes" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #7fdcdc; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Chest Pain" id="Yes" value="2" style="stroke: none;"> Yes
+    </label>
+    <label for="No" style="display: inline-block; padding: 8px 12px; margin-right: 10px; border: 1px solid #93e2f6; border-radius: 1%; cursor: pointer;">
+        <input type="radio" name="Chest Pain" id="No" value="1" style="stroke: none;"> No
+    </label>
+    
+</div>
+
+
+ <button type="submit" class="Submit">Submit</button>
+</div>
+</form>
+
+ 
+ <footer>
+    <p>Predict your health, shape your future. Explore our tools for proactive wellness. Start now! </p>
+ </footer>
+</body>
+</html>
+</body>
+</html>
+
+
+
+
+
+
